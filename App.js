@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ApiCall from './components/apicall';
-import { View, Text, TextInput, Button, StyleSheet, FlatList, Pressable } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, FlatList, Pressable, Vibration } from 'react-native';
 // View -> container that will wrap multiple components together
 // text - to showcase any text
 // textinput -> component
@@ -55,7 +55,7 @@ export default function App() {
         <FlatList
           data={listOfNotes}
           renderItem={(itemData) => (
-            <Pressable onPress={() => handleRemoveItem(itemData.index)}>
+            <Pressable   onPress={() => handleRemoveItem(itemData.index)}>
               <Text style={styles.listItem}> {itemData.item}</Text>
             </Pressable>
           )}
